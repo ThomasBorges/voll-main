@@ -1,4 +1,8 @@
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { ResponsiveContainer } from "recharts";
+import { Bar } from "recharts"
+import { XAxis } from "recharts"
+import { YAxis } from "recharts"
+import { BarChart } from "recharts"
 import IProfissional from "../../types/IProfissional";
 import IConsulta from "../../types/IConsulta";
 import useDadosGrafico from "./useDadosGrafico";
@@ -17,10 +21,10 @@ interface IDados {
 
 const SecaoEstilizada = styled.section`
 background-color: var (--branco);
-border-radius: 16px
+border-radius: 16px;
 `
 
-function Grafico({profissionais, consultas} : Props) {
+function Grafico({ profissionais, consultas }: Props) {
     let dados: Array<IDados> = useDadosGrafico({ profissionais, consultas });
     return (
         <SecaoEstilizada>

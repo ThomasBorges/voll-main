@@ -8,6 +8,7 @@ import Tabela from './components/tabela';
 import useDadosConsulta from './useDadosConsulta';
 import Grafico from './components/Grafico';
 import useDadosProfissional from './useDadosProfissionais';
+import Avaliacao from './components/Avaliacao';
 
 
 function App() {
@@ -26,6 +27,7 @@ if (consultasErro || profissionaisErro) {
       <Titulo>Área Administrativa</Titulo>
       <Tabela consultas={consultas} />
       <Grafico consultas={consultas} profissionais={profissionais} />
+      <Avaliacao profissionais={profissionais} />
     </Container>
     <Rodape /> 
     </>
